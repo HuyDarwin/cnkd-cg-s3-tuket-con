@@ -69,16 +69,16 @@ $(function () {
           else{
             if(eval('data.letter_' + i) != undefined && eval('data.letter_' + i) != null){
               if(eval('data.letter_' + i) == 0){
-                $('#letter_' + i).css('background-image', 'url("https://cdn.glitch.global/bf5bd97f-d51e-485d-8828-ce615120e2e0/o%20chu%20xanh%20luc.jpg?v=1736265520207")');
+                $('#letter_' + i).css('background-image', 'url("Assets/o chu xanh luc.jpg")');
               }
               if(eval('data.letter_' + i) == 1 || eval('data.letter_' + i) == 3 || eval('data.letter_' + i) == 4){
-                $('#letter_' + i).css('background-image', 'url("https://cdn.glitch.global/bf5bd97f-d51e-485d-8828-ce615120e2e0/o%20chu%20trang.jpg?v=1736265521415")');
+                $('#letter_' + i).css('background-image', 'url("Assets/o chu trang.jpg")');
               }
               if(eval('data.letter_' + i) == 2){
-                $('#letter_' + i).css('background-image', 'url("https://cdn.glitch.global/bf5bd97f-d51e-485d-8828-ce615120e2e0/o%20chu%20xanh%20lam.jpg?v=1736265520207")');
+                $('#letter_' + i).css('background-image', 'url("Assets/o chu xanh lam.jpg")');
               }
               if(eval('data.letter_' + i) == 5){
-                $('#letter_' + i).css('background-image', 'url("https://cdn.glitch.global/bf5bd97f-d51e-485d-8828-ce615120e2e0/%C3%B4%20ch%E1%BB%AF%20gi%E1%BA%A3i%20m%C3%A3.png?v=1741175203764")');
+                $('#letter_' + i).css('background-image', 'url("Assets/ô chữ giải mã.png")');
               }
 
               if(eval('data.letter_' + i) == 3){
