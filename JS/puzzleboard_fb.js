@@ -69,16 +69,16 @@ $(function () {
           else{
             if(eval('data.letter_' + i) != undefined && eval('data.letter_' + i) != null){
               if(eval('data.letter_' + i) == 0){
-                $('#letter_' + i).css('background-image', 'url("Assets/o chu xanh luc.jpg")');
+                $('#letter_' + i).css('background-image', 'url("Assets/o_chu_xanh_luc.jpg")');
               }
               if(eval('data.letter_' + i) == 1 || eval('data.letter_' + i) == 3 || eval('data.letter_' + i) == 4){
-                $('#letter_' + i).css('background-image', 'url("Assets/o chu trang.jpg")');
+                $('#letter_' + i).css('background-image', 'url("Assets/o_chu_trang.jpg")');
               }
               if(eval('data.letter_' + i) == 2){
-                $('#letter_' + i).css('background-image', 'url("Assets/o chu xanh lam.jpg")');
+                $('#letter_' + i).css('background-image', 'url("Assets/o_chu_xanh_lam.jpg")');
               }
               if(eval('data.letter_' + i) == 5){
-                $('#letter_' + i).css('background-image', 'url("Assets/ô chữ giải mã.png")');
+                $('#letter_' + i).css('background-image', 'url("Assets/ô_chữ_giải_mã.png")');
               }
 
               if(eval('data.letter_' + i) == 3){
