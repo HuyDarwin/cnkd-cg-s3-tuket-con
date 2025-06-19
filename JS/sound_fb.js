@@ -21,26 +21,26 @@ $(function () {
 			const data = snapshot.val();
 			
 			if (data.sound_intro == 1){
-				con.PlaySound('https://cdn.glitch.global/a7d5a62e-3fb6-4d15-a49b-bbf78da026bd/Intro.mp3?v=1688727097999',1);
+				con.PlaySound("Assets/Intro.mp3", 1);
 				update(ref(db, 'commands'), { sound_intro : 0 });
 			}
 			if (data.sound_he == 1){
-				con.PlaySound('https://cdn.glitch.global/bf5bd97f-d51e-485d-8828-ce615120e2e0/Host%20Entrance.mp3?v=1736350807660',2);
+				con.PlaySound("Assets/Host_Entrance.mp3", 2);
 				update(ref(db, 'commands'), { sound_he : 0 });
 			}
 			if (data.sound_theme == 1){
         setTimeout(function(){
           con.StopAllSounds(4);
         }, 1000)
-				con.PlaySound('https://cdn.glitch.global/a7d5a62e-3fb6-4d15-a49b-bbf78da026bd/Theme%201%20-6%20amplify.mp3?v=1690100609642',5);
+				con.PlaySound("Assets/Theme_1_-6_amplify.mp3", 5);
 				update(ref(db, 'commands'), { sound_theme : 0 });
 			}
 			if (data.sound_bg_1 == 1){
-				con.PlaySound('https://cdn.glitch.global/a7d5a62e-3fb6-4d15-a49b-bbf78da026bd/Background%201.mp3?v=1688727410054',3);
+				con.PlaySound("Assets/Background_1.mp3", 3);
 				update(ref(db, 'commands'), { sound_bg_1 : 0 });
 			}
 			if (data.sound_bg_2 == 1){
-				con.PlaySound('https://cdn.glitch.global/a7d5a62e-3fb6-4d15-a49b-bbf78da026bd/y2mate.com%20-%20Background%20Suspense%20Music%20%20Suspenseful%20%20Dramatic%20Film%20Soundtracks%20ANTICIPATION.mp3?v=1696086684251',3);
+				con.PlaySound("Assets/y2mate.com%20-%20Background%20Suspense%20Music%20%20Suspenseful%20%20Dramatic%20Film%20Soundtracks%20ANTICIPATION.mp3", 3);
 				update(ref(db, 'commands'), { sound_bg_2 : 0 });
 			}
 			if (data.sound_bg_3 == 1){
