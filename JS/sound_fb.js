@@ -293,6 +293,18 @@ $(function () {
 				con.PlaySound("Assets/RightObstacle.mp3", 1);
 				update(ref(db, 'commands'), { sound_cus_4: 0 });
 			}
+            if(data.sound_cus_5 == 1){
+              con.PlaySound("Assets/y2mate.com%20-%20Cute%20Dog%20%20Cat%20Song.mp3", 1)
+              update(ref(db), { sound_cus_5 : 0 })
+            }
+            if(data.sound_cus_6 == 1){
+              con.PlaySound("Assets/utomp3.com%20-%20miaw%20miaw%20miaw%20miaw%20sound%20sad%20viral%20tiktok.mp3", 1)
+              update(ref(db), { sound_cus_6 : 0 })
+            }
+            if(data.sound_cus_7 == 1){
+              con.PlaySound("Assets/tuyệt%20đỉnh%20song%20ca.mp3", 1)
+              update(ref(db), { sound_cus_7 : 0 })
+            }
 
 			if (data.sound_stop == 1) {
 				con.StopAllSounds();
