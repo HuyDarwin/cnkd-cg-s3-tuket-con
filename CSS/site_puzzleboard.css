@@ -22,7 +22,7 @@
 
 
 #puzzle_back_main {
-	background: url('https://cdn.glitch.global/bf5bd97f-d51e-485d-8828-ce615120e2e0/2ca5df5e-27d0-4c9d-b991-d8725e890f6f.jpg?v=1739861040751') no-repeat;
+	background: url("../Assets/2ca5df5e-27d0-4c9d-b991-d8725e890f6f.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;
 	width:100%;
@@ -32,7 +32,7 @@
 }
 
 #puzzle_back_bonus {
-	background: url('https://cdn.glitch.global/bf5bd97f-d51e-485d-8828-ce615120e2e0/e52e609f-05a8-4316-aa15-55cbfa542208.jpg?v=1739861042082') no-repeat;
+	background: url("../Assets/ed725204-7929-458e-848a-34ad98480fd0.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;
 	width:100%;
