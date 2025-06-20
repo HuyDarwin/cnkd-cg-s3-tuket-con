@@ -153,6 +153,8 @@ $(function () {
 					awt_switch : 0,
 					awt_them : 0,
 					awt_wild : 0,
+					awt_qn : 0,
+					awt_ks : 0,
 					reset_wedges_tags : 0
 				})
 			}
