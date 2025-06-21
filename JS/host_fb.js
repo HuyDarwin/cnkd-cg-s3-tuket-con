@@ -14,8 +14,10 @@ $(function () {
 			for (var i = 0; i <= 2; i++) {
 				setTimeout(function(){
 					$('#qi_ks').css("color", "aqua");
+					$('#qi_ks').css("border-color", "aqua");
 					setTimeout(function(){
 						$('#qi_ks').css("color", "white");
+						$('#qi_ks').css("border-color", "white");
 					}, 150);
 				}, 300 * i);
 			}
