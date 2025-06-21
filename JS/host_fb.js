@@ -7,6 +7,19 @@ $(function () {
 
 	(function (con) {
 		const db = getDatabase();
+
+		// Functions
+
+		function AnimateKSTextArea() {
+			for (var i = 0; i <= 2; i++) {
+				setTimeout(function(){
+					$('#qi_ks').css("color", "aqua");
+					setTimeout(function(){
+						$('#qi_ks').css("color", "white");
+					}, 150);
+				}, 300 * i);
+			}
+		}
 		
 		// Get data
 		
@@ -30,7 +43,13 @@ $(function () {
 				$('#cs_c' + data.buzzer_number + ' #cs_td_name, #cs_c' + data.buzzer_number + ' #cs_td_round, #cs_c' + data.buzzer_number + ' #cs_td_total').css('background-color','green');
 			}
       
-			$('#qi_ks').html(data.ket_sat_property);
+			var ks_content = "";
+
+			if (data.ket_sat_property != ks_content) {
+				ks_content = data.ket_sat_property;
+				$('#qi_ks').html(ks_content);
+				AnimateKSTextArea();
+			}
 		})
 		
 		onValue(ref(db, 'variables/letters'), (snapshot) => {
