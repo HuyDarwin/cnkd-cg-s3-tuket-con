@@ -24,6 +24,8 @@ $(function () {
 		}
 		
 		// Get data
+
+		var ks_content = "";
 		
 		onValue(ref(db, 'variables'), (snapshot) => {
 			const data = snapshot.val();
@@ -44,8 +46,6 @@ $(function () {
 			if(data.buzzer_number != 0 && data.buzzer_number != undefined){
 				$('#cs_c' + data.buzzer_number + ' #cs_td_name, #cs_c' + data.buzzer_number + ' #cs_td_round, #cs_c' + data.buzzer_number + ' #cs_td_total').css('background-color','green');
 			}
-      
-			var ks_content = "";
 
 			if (data.ket_sat_property != ks_content) {
 				ks_content = data.ket_sat_property;
