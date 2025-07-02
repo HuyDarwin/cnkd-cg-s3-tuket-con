@@ -272,7 +272,7 @@ $(function () {
 				}
 				else {
 					con.StopAllSounds(4);
-					con.PlaySound("Assets/Solve%20Cue%20Remake%20(Cre_%20Doug%20Roberts).mp3", 1);
+					con.PlaySound("Assets/2021%20Wheel%20of%20Fortune%20Puzzle%20Solve%20SFX%20-%20FULLY%20CLEAN!.mp3", 1);
 				}
 				update(ref(db, 'commands'), { puzzle_solve: 0 });
 			}
