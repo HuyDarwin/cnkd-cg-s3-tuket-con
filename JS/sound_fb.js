@@ -170,7 +170,7 @@ $(function () {
 			}
 			if (data.sound_speedup_bg == 1) {
 				con.StopAllSounds(4);
-				con.PlaySound("Assets/Wheel%20Of%20Fortune%20Speed%20Up%20Music%20(2021-Present)%20(CLEAN).mp3", 5);
+				con.PlaySound("Assets/Wheel%20Of%20Fortune%20Speed%20Up%20Music%20(2021-Present)%20(CLEAN).mp3", 4);
 				update(ref(db, 'commands'), { sound_speedup_bg: 0 });
 			}
 
