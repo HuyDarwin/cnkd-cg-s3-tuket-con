@@ -885,7 +885,7 @@ $(function () {
 			})
 		}
 
-		con.ResetFinalSpinTimer();
+		con.ResetTimer();
 
 	}(window.CNKDCGV = window.CNKDCGV || {}));
 });
