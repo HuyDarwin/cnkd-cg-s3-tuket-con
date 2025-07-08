@@ -146,6 +146,12 @@ $(function () {
 			if (this.id == 'sr_4') {
 				round = 'round_4';
 			}
+			if (this.id == 'sr_fs') {
+				round = 'final_spin';
+			}
+			if (this.id == 'sr_tb') {
+				round = 'tiebreak';
+			}
 			if (this.id == 'sr_a') {
 				round = 'audience_round';
 			}
@@ -191,29 +197,37 @@ $(function () {
 					category = sheet['D58'].v;
 					hint = sheet['D59'].v;
 				}
-				if (round == 'round_1') {
+				if (round == 'tiebreak') {
 					category = sheet['D72'].v;
 					hint = sheet['D73'].v;
 				}
-				if (round == 'round_2') {
+				if (round == 'round_1') {
 					category = sheet['D85'].v;
 					hint = sheet['D86'].v;
 				}
-				if (round == 'round_3') {
+				if (round == 'round_2') {
 					category = sheet['D98'].v;
 					hint = sheet['D99'].v;
 				}
-				if (round == 'round_4') {
+				if (round == 'round_3') {
 					category = sheet['D111'].v;
 					hint = sheet['D112'].v;
 				}
-				if (round == 'audience_round') {
+				if (round == 'round_4') {
 					category = sheet['D124'].v;
 					hint = sheet['D125'].v;
 				}
-				if (round == 'bonus_round') {
+				if (round == 'final_spin') {
 					category = sheet['D137'].v;
 					hint = sheet['D138'].v;
+				}
+				if (round == 'audience_round') {
+					category = sheet['D150'].v;
+					hint = sheet['D151'].v;
+				}
+				if (round == 'bonus_round') {
+					category = sheet['D163'].v;
+					hint = sheet['D164'].v;
 				}
 				update(ref(db, 'variables/letters'), {
 					category: category,
@@ -342,7 +356,7 @@ $(function () {
 							}
 							letters[id - 1].status = 0;
 						}
-						if (round == 'round_1') {
+						if (round == 'tiebreak') {
 							d = sheet[String.fromCharCode(j) + (i + 74)].v;
 							e = sheet[String.fromCharCode(j) + (i + 79)].v;
 							if (d != '.' && e != '.') {
@@ -363,7 +377,7 @@ $(function () {
 							}
 							letters[id - 1].status = 0;
 						}
-						if (round == 'round_2') {
+						if (round == 'round_1') {
 							d = sheet[String.fromCharCode(j) + (i + 87)].v;
 							e = sheet[String.fromCharCode(j) + (i + 92)].v;
 							if (d != '.' && e != '.') {
@@ -384,7 +398,7 @@ $(function () {
 							}
 							letters[id - 1].status = 0;
 						}
-						if (round == 'round_3') {
+						if (round == 'round_2') {
 							d = sheet[String.fromCharCode(j) + (i + 100)].v;
 							e = sheet[String.fromCharCode(j) + (i + 105)].v;
 							if (d != '.' && e != '.') {
@@ -405,7 +419,7 @@ $(function () {
 							}
 							letters[id - 1].status = 0;
 						}
-						if (round == 'round_4') {
+						if (round == 'round_3') {
 							d = sheet[String.fromCharCode(j) + (i + 113)].v;
 							e = sheet[String.fromCharCode(j) + (i + 118)].v;
 							if (d != '.' && e != '.') {
@@ -426,7 +440,7 @@ $(function () {
 							}
 							letters[id - 1].status = 0;
 						}
-						if (round == 'audience_round') {
+						if (round == 'round_4') {
 							d = sheet[String.fromCharCode(j) + (i + 126)].v;
 							e = sheet[String.fromCharCode(j) + (i + 131)].v;
 							if (d != '.' && e != '.') {
@@ -447,9 +461,51 @@ $(function () {
 							}
 							letters[id - 1].status = 0;
 						}
-						if (round == 'bonus_round') {
+						if (round == 'final_spin') {
 							d = sheet[String.fromCharCode(j) + (i + 139)].v;
 							e = sheet[String.fromCharCode(j) + (i + 144)].v;
+							if (d != '.' && e != '.') {
+								f = true;
+							}
+							else {
+								f = false;
+							}
+							var id = (j - 64 + (maxcot - 1) * (i - 1) + i - 1);
+							update(ref(db, 'variables/letters/no_tonemark'), { ['letter_' + id]: d })
+							update(ref(db, 'variables/letters/having_tonemark'), { ['letter_' + id]: e })
+							update(ref(db, 'variables/letters/letter_existence'), { ['letter_' + id]: f })
+							letters[id - 1].no_tonemark = d;
+							letters[id - 1].having_tonemark = e;
+							letters[id - 1].letter_existence = f;
+							if (d == '$') {
+								play_giai_ma = true;
+							}
+							letters[id - 1].status = 0;
+						}
+						if (round == 'audience_round') {
+							d = sheet[String.fromCharCode(j) + (i + 152)].v;
+							e = sheet[String.fromCharCode(j) + (i + 157)].v;
+							if (d != '.' && e != '.') {
+								f = true;
+							}
+							else {
+								f = false;
+							}
+							var id = (j - 64 + (maxcot - 1) * (i - 1) + i - 1);
+							update(ref(db, 'variables/letters/no_tonemark'), { ['letter_' + id]: d })
+							update(ref(db, 'variables/letters/having_tonemark'), { ['letter_' + id]: e })
+							update(ref(db, 'variables/letters/letter_existence'), { ['letter_' + id]: f })
+							letters[id - 1].no_tonemark = d;
+							letters[id - 1].having_tonemark = e;
+							letters[id - 1].letter_existence = f;
+							if (d == '$') {
+								play_giai_ma = true;
+							}
+							letters[id - 1].status = 0;
+						}
+						if (round == 'bonus_round') {
+							d = sheet[String.fromCharCode(j) + (i + 165)].v;
+							e = sheet[String.fromCharCode(j) + (i + 170)].v;
 							if (d != '.' && e != '.') {
 								f = true;
 							}
