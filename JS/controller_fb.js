@@ -207,8 +207,8 @@ $(function () {
 					hint = sheet['D59'].v;
 				}
 				if (round == 'tiebreak') {
-					category = sheet['D72'].v;
-					hint = sheet['D73'].v;
+					category = sheet['D71'].v;
+					hint = sheet['D72'].v;
 				}
 				if (round == 'round_1') {
 					category = sheet['D85'].v;
@@ -366,8 +366,8 @@ $(function () {
 							letters[id - 1].status = 0;
 						}
 						if (round == 'tiebreak') {
-							d = sheet[String.fromCharCode(j) + (i + 74)].v;
-							e = sheet[String.fromCharCode(j) + (i + 79)].v;
+							d = sheet[String.fromCharCode(j) + (i + 73)].v;
+							e = sheet[String.fromCharCode(j) + (i + 78)].v;
 							if (d != '.' && e != '.') {
 								f = true;
 							}
@@ -584,7 +584,12 @@ $(function () {
 
 			$('#puzzle_reveal').attr('disabled', true);
 			$('#puzzle_solve').removeAttr('disabled');
-			$('#puzzle_fs').removeAttr('disabled').css('border-color', 'initial');;
+			$('#puzzle_fs').css('border-color', 'initial');
+
+			if (round != "tossup_1" && round != "tossup_2" && round != "triple_tossup_1" && round != "triple_tossup_2" && round != "triple_tossup_3" && round != "tiebreak") {
+				$('#puzzle_fs').removeAttr('disabled');
+			}
+
 			if (play_giai_ma == false) {
 				$('#puzzle_giaima').attr('disabled', true);
 			}
