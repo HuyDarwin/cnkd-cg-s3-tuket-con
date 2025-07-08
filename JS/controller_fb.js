@@ -120,6 +120,10 @@ $(function () {
 			update(ref(db, 'variables'), { spinning_random_degree: Math.floor(Math.random() * 1250 + 1251) })
 		})
 
+		$('#fspin').click(function () {
+			update(ref(db, 'variables'), { spinning_random_degree: Math.floor(Math.random() * 1250 + 1251) })
+		})
+
 		$('.select_round').click(function () {
 			$('.select_round').css('border-color', 'initial');
 			$('#' + this.id).css('border-color', 'aqua');
