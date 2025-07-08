@@ -171,13 +171,13 @@ $(function () {
 				update(ref(db, 'commands'), { puzzle_back_3 : 0 })
       }
       if(data.puzzle_solve == 1) {
-        if (a == "tossup_1" || a == "tossup_2" || a == "triple_tossup_1" || a == "triple_tossup_2" || a == "triple_tossup_3"){
+        if (a == "tossup_1" || a == "tossup_2" || a == "triple_tossup_1" || a == "triple_tossup_2" || a == "triple_tossup_3" || a == "tiebreak"){
           setTimeout(function(){
             StopVideo("#puzzle_tossup");
           }, 500)
 				  PlayVideoOnce("#puzzle_solve_tossup");
         }
-        else if(a == "round_1" || a == "round_2" || a == "round_3" || a == "audience_round" || a == "round_4") {
+        else if(a == "round_1" || a == "round_2" || a == "round_3" || a == "audience_round" || a == "round_4" || a == "final_spin") {
           PlayVideoOnce("#puzzle_solve_main");
         }
 				update(ref(db, 'commands'), { puzzle_solve : 0 })

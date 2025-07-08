@@ -246,7 +246,7 @@ $(function () {
 				update(ref(db, 'commands'), { puzzle_reveal: 0 });
 			}
 			if (data.open_letter == 1) {
-				if (h == 'tossup_1' || h == 'tossup_2' || h == 'triple_tossup_1') {
+				if (h == 'tossup_1' || h == 'tossup_2' || h == 'triple_tossup_1' || h == 'tiebreak') {
 					con.PlaySound("Assets/Triple%20Toss%20Up%20%231.mp3", 4);
 				}
 				else if (h == 'triple_tossup_2') {
