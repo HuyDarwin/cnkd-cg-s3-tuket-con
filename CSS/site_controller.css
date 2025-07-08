@@ -90,7 +90,14 @@ textarea {
 
 #spin {
 	top:4.6vw;
-	width:32.15vw;
+	width:16vw;
+	left:0vw;
+}
+
+#fspin {
+	top:4.6vw;
+	width:16vw;
+	left:16.15vw;
 }
 
 .add_wedge_tag_holder {
@@ -204,6 +211,11 @@ textarea {
 #puzzle_giaima {
 	top:18.4vw;
 	left:16.8vw;
+}
+
+#puzzle_fs {
+	top:18.4vw;
+	left:25.2vw;
 }
 
 #tossup_buzzer {

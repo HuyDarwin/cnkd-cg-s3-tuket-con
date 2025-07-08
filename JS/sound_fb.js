@@ -168,6 +168,11 @@ $(function () {
 				con.PlaySound("Assets/Express%20Music.mp3", 5);
 				update(ref(db, 'commands'), { sound_ex_bg: 0 });
 			}
+			if (data.sound_speedup_bg == 1) {
+				con.StopAllSounds(4);
+				con.PlaySound("Assets/Wheel%20Of%20Fortune%20Speed%20Up%20Music%20(2021-Present)%20(CLEAN).mp3", 5);
+				update(ref(db, 'commands'), { sound_speedup_bg: 0 });
+			}
 
 			if (data.sound_br_spin == 1) {
 				con.PlaySound("Assets/Bonus%20Spin%20Cue.mp3", 1);
@@ -230,6 +235,10 @@ $(function () {
 				con.PlaySound("Assets/CNKD%20CG%20S3%20Wheel%20Spin%20Final.mp3", 1);
 				update(ref(db, 'commands'), { spin: 0 });
 			}
+			if (data.fspin == 1) {
+				con.PlaySound("Assets/CNKD%20CG%20S3%20Final%20Spin%20Final.mp3", 1);
+				update(ref(db, 'commands'), { fspin: 0 });
+			}
 			if (data.puzzle_reveal == 1) {
 				if (h != 'bonus_round') {
 					con.PlaySound("Assets/Puzzle%20Reveal.wav", 1);
@@ -253,7 +262,7 @@ $(function () {
 				update(ref(db, 'commands'), { tossup_buzzer: 0 });
 			}
 			if (data.puzzle_solve == 1) {
-				if (h == 'tossup_1' || h == 'tossup_2' || h == 'triple_tossup_3') {
+				if (h == 'tossup_1' || h == 'tossup_2' || h == 'triple_tossup_3' || h == 'tiebreak') {
 					con.StopAllSounds(4);
 					con.PlaySound("Assets/Toss%20Up%20Solve%20Cue.mp3", 1);
 				}
@@ -272,9 +281,14 @@ $(function () {
 				}
 				else {
 					con.StopAllSounds(4);
+					con.StopAllSounds(5);
 					con.PlaySound("Assets/2021%20Wheel%20of%20Fortune%20Puzzle%20Solve%20SFX%20-%20FULLY%20CLEAN!.mp3", 1);
 				}
 				update(ref(db, 'commands'), { puzzle_solve: 0 });
+			}
+			if (data.puzzle_fs == 1) {
+				con.PlaySound("Assets/Wheel%20of%20fortune%20final%20spin%20bell.mp3", 1);
+				update(ref(db, 'commands'), { puzzle_fs: 0 });
 			}
 
 			if (data.sound_cus_1 == 1) {

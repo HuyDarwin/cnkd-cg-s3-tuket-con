@@ -16,11 +16,15 @@ $(function () {
 		var maxochu = 56;
 
 		var play_giai_ma = false;
+		var play_final_spin = false;
+		
+		var letters_remaining = 0;
 
 		remove(ref(db));
 
 		update(ref(db, 'variables'), {
 			spinning_miliseconds: 7500,
+			spinning_fspin_miliseconds: 5000,
 			//spinning_miliseconds: 10000,
 			spinning_rotating_degree: 0,
 			spinning_random_degree: 0,
@@ -117,8 +121,9 @@ $(function () {
 		})
 
 		$('.select_round').click(function () {
-			$('.select_round').removeAttr('disabled');
-			$('#' + this.id).attr('disabled', true);
+			$('.select_round').css('border-color', 'initial');
+			$('#' + this.id).css('border-color', 'aqua');
+
 			if (this.id == 'sr_t1') {
 				round = 'tossup_1';
 			}
@@ -570,8 +575,12 @@ $(function () {
 		})
 
 		$('#puzzle_reveal').click(function () {
+			play_final_spin = false;
+			letters_remaining = 0;
+
 			$('#puzzle_reveal').attr('disabled', true);
 			$('#puzzle_solve').removeAttr('disabled');
+			$('#puzzle_fs').removeAttr('disabled');
 			if (play_giai_ma == false) {
 				$('#puzzle_giaima').attr('disabled', true);
 			}
@@ -602,7 +611,11 @@ $(function () {
 			}
 		})
 		$('#puzzle_solve').click(function () {
+			play_final_spin = false;
+			letters_remaining = 0;
+
 			$('.open_letter, #puzzle_solve, #tossup_buzzer, #tossup_continue').attr('disabled', true);
+			$('#puzzle_fs').attr('disabled', true);
 			for (var i = 1; i <= maxochu; i++) {
 				if (letters[i - 1].letter_existence == true && letters[i - 1].status != 5) {
 					letters[i - 1].status = 4;
@@ -633,6 +646,11 @@ $(function () {
 				}
 			}
 		})
+		$("#puzzle_fs").click(function () {
+			$('#puzzle_fs').attr('disabled', true);
+			
+			play_final_spin = true;
+		})
 
 		$('#sound_br_10s').click(function () {
 			setTimeout(function () {
@@ -644,7 +662,7 @@ $(function () {
 		})
 
 		$('.open_letter').click(function () {
-			if (round == 'tossup_1' || round == 'tossup_2' || round == 'triple_tossup_1' || round == 'triple_tossup_2' || round == 'triple_tossup_3') {
+			if (round == 'tossup_1' || round == 'tossup_2' || round == 'triple_tossup_1' || round == 'triple_tossup_2' || round == 'triple_tossup_3' || round == 'tiebreak') {
 				if (letters[Number(this.id.replace('ol_', '')) - 1].status == 1) {
 					letters[Number(this.id.replace('ol_', '')) - 1].status = 3;
 					update(ref(db, 'variables/letters/status'), { ['letter_' + this.id.replace('ol_', '')]: 3 })
@@ -687,12 +705,28 @@ $(function () {
 					update(ref(db, 'variables/letters/status'), { ['letter_' + this.id.replace('ol_', '')]: 2 })
 					$('#' + this.id).css({ 'background-color': '#23395D' });
 					update(ref(db, 'commands'), { sound_letter: 1 })
+
+					if (play_final_spin == true) {
+						letters_remaining++;
+
+						if (letters_remaining == 1) {
+							con.StopFinalSpinTimer();
+						}
+					}
 				}
 				else if (letters[Number(this.id.replace('ol_', '')) - 1].status == 2) {
 					letters[Number(this.id.replace('ol_', '')) - 1].status = 3;
 					update(ref(db, 'variables/letters/status'), { ['letter_' + this.id.replace('ol_', '')]: 3 })
 					$('#' + this.id).css({ 'background-color': 'black' });
 					$('#' + this.id).attr('disabled', true);
+
+					if (play_final_spin == true) {
+						letters_remaining--;
+
+						if (letters_remaining == 0) {
+							con.PlayFinalSpinTimer();
+						}
+					}
 				}
 			}
 		})
@@ -844,6 +878,8 @@ $(function () {
 				status: 0
 			})
 		}
+
+		con.ResetFinalSpinTimer();
 
 	}(window.CNKDCGV = window.CNKDCGV || {}));
 });
