@@ -272,12 +272,12 @@ textarea {
 }
 
 .timer {
-	left: 35.75vw;
+	left: 35.25vw;
 	height: 4vw;
-	top: 41.25vw;
+	top: 40.75vw;
 	width: 4vw;
 	background-color:black;
-	border-color:white;
+	border: 0.1vw solid white;
 }
 
 .timer_text {
