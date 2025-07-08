@@ -20,6 +20,26 @@
 	opacity: 0;
 }
 
+#puzzle_frame_main {
+	background: url("../Assets/khung%20tứ%20kết_.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	top: 0vw;
+	left: 0vw;
+}
+
+#puzzle_frame_bonus {
+	background: url("../Assets/khung%20tứ%20kết%20vòng%20đặc%20biệt.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	top: 0vw;
+	left: 0vw;
+	opacity: 0;
+}
 
 #puzzle_back_main {
 	background: url("../Assets/2ca5df5e-27d0-4c9d-b991-d8725e890f6f.jpg") no-repeat;

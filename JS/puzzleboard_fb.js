@@ -146,16 +146,28 @@ $(function () {
       if(data.puzzle_back_1 == 1) {
         $("#puzzle_back_main, #puzzle_back_bonus, #puzzle_back_end_bonus").css('opacity', 0);
         $("#puzzle_back_main").css('opacity', 1);
+
+        $("#puzzle_frame_bonus").css('opacity', 0);
+        $("#puzzle_frame_main").css('opacity', 1);
+
 				update(ref(db, 'commands'), { puzzle_back_1 : 0 })
       }   
       if(data.puzzle_back_2 == 1) {
         $("#puzzle_back_main, #puzzle_back_bonus, #puzzle_back_end_bonus").css('opacity', 0);
         $("#puzzle_back_bonus").css('opacity', 1);
+
+        $("#puzzle_frame_main").css('opacity', 0);
+        $("#puzzle_frame_bonus").css('opacity', 1);
+        
 				update(ref(db, 'commands'), { puzzle_back_2 : 0 })
       }   
       if(data.puzzle_back_3 == 1) {
         $("#puzzle_back_main, #puzzle_back_bonus, #puzzle_back_end_bonus").css('opacity', 0);
         $("#puzzle_back_end_bonus").css('opacity', 1);
+
+        $("#puzzle_frame_main").css('opacity', 0);
+        $("#puzzle_frame_bonus").css('opacity', 1);
+        
 				update(ref(db, 'commands'), { puzzle_back_3 : 0 })
       }
       if(data.puzzle_solve == 1) {
