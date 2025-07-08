@@ -52,6 +52,8 @@ $(function () {
 				$('#qi_ks').html(ks_content);
 				AnimateKSTextArea();
 			}
+
+			$(".timer_text").html(data.timer);
 		})
 		
 		onValue(ref(db, 'variables/letters'), (snapshot) => {

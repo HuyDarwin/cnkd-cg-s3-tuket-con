@@ -257,6 +257,13 @@ textarea {
 	width: 31.25vw;
 }
 
+#qi_ks {
+	left: 40vw;
+	height: 8.75vw;
+	top: 36.5vw;
+	width: 31.25vw;
+}
+
 #qi_hint {
 	left: 0.5vw;
 	height: 18.25vw;
@@ -264,9 +271,22 @@ textarea {
 	width: 39.25vw;
 }
 
-#qi_ks {
-	left: 40vw;
-	height: 8.75vw;
-	top: 36.5vw;
-	width: 31.25vw;
+.timer {
+	left: 35.75vw;
+	height: 4vw;
+	top: 41.25vw;
+	width: 4vw;
+	background-color:black;
+	border-color:white;
+}
+
+.timer_text {
+	width: 100%;
+	height:100%;
+	top:0%;
+	left:0%;
+	font-family: 'Fz Lufga';
+	font-size: 1.6vw;
+	font-weight: bold;
+	color:white;
 }

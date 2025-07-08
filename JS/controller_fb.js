@@ -704,7 +704,9 @@ $(function () {
 					letters[Number(this.id.replace('ol_', '')) - 1].status = 2;
 					update(ref(db, 'variables/letters/status'), { ['letter_' + this.id.replace('ol_', '')]: 2 })
 					$('#' + this.id).css({ 'background-color': '#23395D' });
-					update(ref(db, 'commands'), { sound_letter: 1 })
+					if (play_final_spin == false) {
+						update(ref(db, 'commands'), { sound_letter: 1 })
+					}
 
 					if (play_final_spin == true) {
 						letters_remaining++;
