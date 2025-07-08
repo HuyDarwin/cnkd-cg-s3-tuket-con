@@ -70,21 +70,21 @@ $(function () {
 				update(ref(db, 'commands'), { cwb_blue : 0 })
 			}
       
-			if(data.cw_r1 == 1){
+			if(data.cw_v1 == 1){
 				$('.wheel').css('background-image', 'url("Assets/nón%20v1%403x.png")');
-				update(ref(db, 'commands'), { cw_r1 : 0 })
+				update(ref(db, 'commands'), { cw_v1 : 0 })
 			}
-			if(data.cw_r2 == 1){
+			if(data.cw_v2 == 1){
 				$('.wheel').css('background-image', 'url("Assets/nón%20v2%403x.png")');
-				update(ref(db, 'commands'), { cw_r2 : 0 })
+				update(ref(db, 'commands'), { cw_v2 : 0 })
 			}
-			if(data.cw_r3 == 1){
+			if(data.cw_v3 == 1){
 				$('.wheel').css('background-image', 'url("Assets/nón%20v2%403x.png")');
-				update(ref(db, 'commands'), { cw_r3 : 0 })
+				update(ref(db, 'commands'), { cw_v3 : 0 })
 			}
-			if(data.cw_r4 == 1){
-				$('.wheel').css('background-image', 'url("Assets/nón%20v3%403x.png")');
-				update(ref(db, 'commands'), { cw_r4 : 0 })
+			if(data.cw_v4 == 1){
+				$('.wheel').css('background-image', 'url("Assets/nón%20v3_s3_tứkết%20official.png")');
+				update(ref(db, 'commands'), { cw_v4 : 0 })
 			}
 			if(data.spin == 1){
 				var spinning_final_rotating_degree = (a + b) % 360;

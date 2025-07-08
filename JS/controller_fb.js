@@ -772,7 +772,7 @@ $(function () {
 
 		// Action
 
-		$('#cw_r1').click();
+		$('#cw_v1').click();
 		$('#cwb_main').click();
 		$('#reset_wedges_tags').click();
 		$('#hide_backdrop').click();

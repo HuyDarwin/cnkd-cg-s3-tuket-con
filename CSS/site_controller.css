@@ -76,16 +76,16 @@ textarea {
   top:2.3vw;
 }
 
-#cw_r2 {
+#cw_v2 {
 	left:5.75vw;
 }
 
-#cw_r3 {
-	left:11.7vw;
+#cw_v3 {
+	left:12.3vw;
 }
 
-#cw_r4 {
-	left:17.7vw;
+#cw_v4 {
+	left:18.3vw;
 }
 
 #spin {
@@ -158,53 +158,15 @@ textarea {
 	left:33vw;
 }
 
-#sr_t2 {
-	left:8vw;
+.select_round_holder {
+  top:0vw;
+  width:32.15vw;
+  height:6.9vw;
 }
 
-#sr_1 {
-	left:16.2vw;
-}
-
-#sr_2 {
-	left:22vw;
-}
-
-#sr_3 {
-	top:2.3vw;
-}
-
-#sr_tt1 {
-	top:2.3vw;
-	left:6.1vw;
-}
-
-#sr_tt2 {
-	top:2.3vw;
-	left:15.2vw;
-}
-
-#sr_tt3 {
-	top:4.6vw;
-}
-
-#sr_4 {
-	top:4.6vw;
-	left:9.4vw;
-}
-
-#sr_a {
-	top:4.6vw;
-	left:15.5vw;
-}
-
-#sr_b {
-	top:6.9vw;
-}
-
-#reset_puzzleboard_data {
-	top:6.9vw;
-	left:11vw;
+.select_round_holder button {
+  position:static;
+  margin-bottom:0.1vw;
 }
 
 .open_letter {
