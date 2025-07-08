@@ -719,8 +719,10 @@ $(function () {
 
 					if (play_final_spin == true) {
 						letters_remaining++;
+						console.log(letters_remaining);
 
 						if (letters_remaining == 1) {
+							console.log("stop");
 							con.StopFinalSpinTimer();
 						}
 					}
@@ -733,8 +735,10 @@ $(function () {
 
 					if (play_final_spin == true) {
 						letters_remaining--;
+						console.log(letters_remaining);
 
 						if (letters_remaining == 0) {
+							console.log("play");
 							con.PlayFinalSpinTimer();
 						}
 					}
