@@ -584,7 +584,7 @@ $(function () {
 
 			$('#puzzle_reveal').attr('disabled', true);
 			$('#puzzle_solve').removeAttr('disabled');
-			$('#puzzle_fs').removeAttr('disabled');
+			$('#puzzle_fs').removeAttr('disabled').css('border-color', 'initial');;
 			if (play_giai_ma == false) {
 				$('#puzzle_giaima').attr('disabled', true);
 			}
@@ -619,7 +619,7 @@ $(function () {
 			letters_remaining = 0;
 
 			$('.open_letter, #puzzle_solve, #tossup_buzzer, #tossup_continue').attr('disabled', true);
-			$('#puzzle_fs').attr('disabled', true);
+			$('#puzzle_fs').attr('disabled', true).css('border-color', 'initial');;
 			for (var i = 1; i <= maxochu; i++) {
 				if (letters[i - 1].letter_existence == true && letters[i - 1].status != 5) {
 					letters[i - 1].status = 4;
@@ -651,7 +651,7 @@ $(function () {
 			}
 		})
 		$("#puzzle_fs").click(function () {
-			$('#puzzle_fs').attr('disabled', true);
+			$('#puzzle_fs').attr('disabled', true).css('border-color', 'aqua');;
 			
 			play_final_spin = true;
 		})
