@@ -177,20 +177,20 @@ $(function () {
 		  update(ref(db, 'variables'), { timer : timer });
         }
         con.PlayTimer = function(secs, is_final_spin) {
-          ResetTimer();
+          con.ResetTimer();
           is_timer_running = true;
           timer = secs;
           update(ref(db, 'variables'), { timer : timer });
           timer_int = setInterval(function () {
             if(is_timer_running && timer == 0){
-              ResetTimer();
+              con.ResetTimer();
             }
             else if (is_timer_running && timer != 0) {
               timer--;
 			  update(ref(db, 'variables'), { timer : timer });
 
 			  if (timer == 0 && is_final_spin == true) {
-				uupdate(ref(db, 'commands'), { sound_wrong: 1 });
+				update(ref(db, 'commands'), { sound_wrong: 1 });
 			  }
             }
           }, 1000);
