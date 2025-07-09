@@ -190,7 +190,7 @@ $(function () {
 			  update(ref(db, 'variables'), { timer : timer });
 
 			  if (timer == 0 && is_final_spin == true) {
-				update(ref(db, 'commands'), { sound_wrong: 1 });
+				update(ref(db, 'commands'), { sound_wrong_nostop: 1 });
 			  }
             }
           }, 1000);

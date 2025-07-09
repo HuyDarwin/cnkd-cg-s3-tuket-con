@@ -97,6 +97,10 @@ $(function () {
 				con.PlaySound("Assets/Letter%20Buzzer.wav", 2);
 				update(ref(db, 'commands'), { sound_wrong: 0 });
 			}
+			if (data.sound_wrong_nostop == 1) {
+				con.PlaySound("Assets/Letter%20Buzzer.wav", 2);
+				update(ref(db, 'commands'), { sound_wrong_nostop: 0 });
+			}
 			if (data.sound_br_double_buzzer == 1) {
 				con.PlaySound("Assets/Double%20Buzzer%20(For%20Bonus%20Round).mp3", 2);
 				update(ref(db, 'commands'), { sound_br_double_buzzer: 0 });
