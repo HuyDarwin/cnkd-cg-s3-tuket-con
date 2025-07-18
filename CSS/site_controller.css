@@ -159,12 +159,12 @@ textarea {
 }
 
 #edit_passkey {
-	top: 24.3vw;
-	left: 16.5vw;
+	top: 26.6vw;
 }
 
 #reload_auth {
-	top: 26.9vw;
+	top: 26.6vw;
+	left: 9.5vw;
 }
 
 #bh_puzzleboard {
