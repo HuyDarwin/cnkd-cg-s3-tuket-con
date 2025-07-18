@@ -9,7 +9,7 @@ $(function () {
         //
 
         const db = getDatabase();
-        const dbKey = "altpgn";
+        const dbKey = "cnkdcgv";
 
         //
 

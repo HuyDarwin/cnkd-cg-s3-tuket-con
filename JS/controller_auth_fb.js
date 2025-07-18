@@ -11,6 +11,12 @@ $(function () {
 
         //
 
+        function upd(key, val) {
+            update(ref(db, dbKey), {
+                [key]: val
+            })
+        }
+
         function upd_passkey(key, val) {
             update(ref(db, dbKey + "_passkey"), {
                 [key]: val
@@ -33,8 +39,12 @@ $(function () {
         $(".popup-close").click(function(){
           $(".popup").css("top", "1920px");
         });
+
+        $(".reload_auth").click(function(){
+          upd("reload_auth", 1);
+        });
       
-        $(".edit-passkey").click(function(){
+        $(".edit_passkey").click(function(){
           $(".popup").css("top", "1920px");
           $("#popup-passkey").css("top", "0px");
         });
