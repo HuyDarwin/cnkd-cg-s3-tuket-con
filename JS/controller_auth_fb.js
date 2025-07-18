@@ -30,6 +30,19 @@ $(function () {
         function dib(key) {
             $(key).attr('disabled', true);
         }
+
+        function getRandomIntInclusive(min, max) {
+          const minCeiled = Math.ceil(min);
+          const maxFloored = Math.floor(max);
+          return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
+        }
+      
+        function ForbiddenButton (button) {
+          $(button).css("background-color", "red");
+          setTimeout(function(){
+            $(button).css("background-color", "black");
+          }, 250);
+        }
       
         // Popup - Passkey
       
