@@ -40,11 +40,11 @@ $(function () {
           $(".popup").css("top", "1920px");
         });
 
-        $(".reload_auth").click(function(){
+        $("#reload_auth").click(function(){
           upd("reload_auth", 1);
         });
       
-        $(".edit_passkey").click(function(){
+        $("#edit_passkey").click(function(){
           $(".popup").css("top", "1920px");
           $("#popup-passkey").css("top", "0px");
         });
