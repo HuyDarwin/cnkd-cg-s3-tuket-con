@@ -126,8 +126,8 @@ $(function () {
 		})
 
 		$('.select_round').click(function () {
-			$('.select_round').css('border-color', 'initial');
-			$('#' + this.id).css('border-color', 'aqua');
+			$('.select_round').css({ 'background-color': 'black' });
+			$('#' + this.id).css({ 'background-color': '#23395D' });
 
 			if (this.id == 'sr_t1') {
 				round = 'tossup_1';
@@ -625,7 +625,7 @@ $(function () {
 			letters_remaining = 0;
 
 			$('.open_letter, #puzzle_solve, #tossup_buzzer, #tossup_continue').attr('disabled', true);
-			$('#puzzle_fs').attr('disabled', true).css('border-color', 'initial');;
+			$('#puzzle_fs').attr('disabled', true).css('border-color', 'initial');
 			for (var i = 1; i <= maxochu; i++) {
 				if (letters[i - 1].letter_existence == true && letters[i - 1].status != 5) {
 					letters[i - 1].status = 4;
