@@ -81,7 +81,7 @@ $(function () {
             const data = snapshot.val();
           
             var pp_copy_string = "";
-            for (var i = 1; i <= 6; i++) {
+            for (var i = 1; i <= 3; i++) {
               con.TextUpdateData("#ppp_player_" + i + " .ppp-pass", eval("data.player_" + i + "_passkey"), 1);
               pp_copy_string += "Mã NC" + i + ": " + eval("data.player_" + i + "_passkey") + "\n";
             }
