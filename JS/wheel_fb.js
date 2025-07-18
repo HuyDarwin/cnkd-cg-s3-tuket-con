@@ -85,7 +85,7 @@ $(function () {
 				update(ref(db, 'commands'), { cw_v3: 0 })
 			}
 			if (data.cw_v4 == 1) {
-				$('.wheel').css('background-image', 'url("Assets/nón%20v3_s3_tứkết%20official.png")');
+				$('.wheel').css('background-image', 'url("Assets/nón%20v3_tuket@3x.png")');
 				update(ref(db, 'commands'), { cw_v4: 0 })
 			}
 			if (data.spin == 1) {
