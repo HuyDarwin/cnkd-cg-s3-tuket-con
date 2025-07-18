@@ -58,7 +58,7 @@ $(function () {
           
             $(".passkey-submit").click(function(){
               var pass_inp = $(".passkey-input").val();
-              for (var i = 1; i <= 6; i++) {
+              for (var i = 1; i <= 3; i++) {
                 if (pass_inp == eval("data.player_" + i + "_passkey")) {
                   $(".stage").html("<iframe style='width:100%;height:100%;left:0%;top:0%;' src='" + data.player_url + "?player=" + i + "'></iframe>");
                   $(document).prop('title', 'Player ' + i);
