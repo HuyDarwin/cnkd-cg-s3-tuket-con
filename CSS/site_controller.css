@@ -400,3 +400,99 @@ textarea {
 #reset_round, #reset_total {
 	top:17.65vw;
 }
+
+/* popup passkey */
+.popup-passkey-player {
+  width:39%;
+  height:15%;
+}
+
+.ppp-input{
+  width:69%;
+  height:49%;
+  left:0%;
+  top:0%;
+  font-size:48px;
+}
+
+.ppp-submit{
+  width:29%;
+  height:49%;
+  left:70%;
+  top:0%;
+  font-size:36px;
+}
+
+.ppp-pass{
+  width:69%;
+  height:49%;
+  left:0%;
+  top:50%;
+}
+
+.ppp-pass svg {
+  width:100%;
+  height:100%;
+  left:0%;
+  top:0%
+}
+
+.ppp-pass svg text{
+  font-family:"Tahoma";
+  font-size:48px;
+  font-weight:bold;
+  fill:white;
+  transform:translateY(75%);
+}
+
+.ppp-random{
+  width:29%;
+  height:49%;
+  left:70%;
+  top:50%;
+  font-size:36px;
+}
+
+#ppp_player_1{
+  top:10%;
+  left:0.5%;
+}
+
+#ppp_player_2{
+  top:26%;
+  left:0.5%;
+}
+
+#ppp_player_3{
+  top:42%;
+  left:0.5%;
+}
+
+#ppp_player_4{
+  top:10%;
+  left:40%;
+}
+
+#ppp_player_5{
+  top:26%;
+  left:40%;
+}
+
+#ppp_player_6{
+  top:42%;
+  left:40%;
+}
+
+#ppp_host{
+  top:58%;
+  left:0.5%;
+}
+
+
+.popup-passkey-copy{
+  left:79%;
+  top:10%;
+  width:20%;
+  height:90%;
+  font-size:36px;
+}

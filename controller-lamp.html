@@ -7,6 +7,7 @@
 	<script type="module" src="JS/firebase.js"></script>
 	<script type='module' src='JS/functions.js'></script>	
 	<script type="module" src="JS/controller_fb.js"></script>
+	<script type="module" src="JS/controller_auth_fb.js"></script>
 	
     <link rel="stylesheet" type="text/css" href="CSS/reset.css">
 	<link rel="stylesheet" type="text/css" href="CSS/site.css">
@@ -251,6 +252,101 @@
 		<button class='update_total_score' id='replace_total'>SET V</button>
 		<button class='update_total_score' id='reset_total'>0</button>
 	</div>
+
+
+    
+    <div class="popup" id="popup-passkey">
+      <p class="popup-title">Thay đổi mật khẩu</p>
+      <button class="popup-close">X</button>
+      
+      <div class="popup-passkey-player" id="ppp_player_1">
+        <textarea class="ppp-input" placeholder="Người chơi 1..."></textarea>
+        <button class="ppp-submit">Cập nhật</button>
+        
+        <div class="ppp-pass">
+          <svg data-top="0" data-ypos="0" data-lines="1" data-scale="true"> 
+            <text lengthAdjust="spacingAndGlyphs" id="line_1"></text>
+          </svg>
+        </div>
+        <button class="ppp-random">Ngẫu nhiên</button>
+      </div>
+      
+      <div class="popup-passkey-player" id="ppp_player_2">
+        <textarea class="ppp-input" placeholder="Người chơi 2..."></textarea>
+        <button class="ppp-submit">Cập nhật</button>
+        
+        <div class="ppp-pass">
+          <svg data-top="0" data-ypos="0" data-lines="1" data-scale="true"> 
+            <text lengthAdjust="spacingAndGlyphs" id="line_1"></text>
+          </svg>
+        </div>
+        <button class="ppp-random">Ngẫu nhiên</button>
+      </div>
+      
+      <div class="popup-passkey-player" id="ppp_player_3">
+        <textarea class="ppp-input" placeholder="Người chơi 3..."></textarea>
+        <button class="ppp-submit">Cập nhật</button>
+        
+        <div class="ppp-pass">
+          <svg data-top="0" data-ypos="0" data-lines="1" data-scale="true"> 
+            <text lengthAdjust="spacingAndGlyphs" id="line_1"></text>
+          </svg>
+        </div>
+        <button class="ppp-random">Ngẫu nhiên</button>
+      </div>
+      
+      <div class="popup-passkey-player" id="ppp_player_4">
+        <textarea class="ppp-input" placeholder="Người chơi 4..."></textarea>
+        <button class="ppp-submit">Cập nhật</button>
+        
+        <div class="ppp-pass">
+          <svg data-top="0" data-ypos="0" data-lines="1" data-scale="true"> 
+            <text lengthAdjust="spacingAndGlyphs" id="line_1"></text>
+          </svg>
+        </div>
+        <button class="ppp-random">Ngẫu nhiên</button>
+      </div>
+      
+      <div class="popup-passkey-player" id="ppp_player_5">
+        <textarea class="ppp-input" placeholder="Người chơi 5..."></textarea>
+        <button class="ppp-submit">Cập nhật</button>
+        
+        <div class="ppp-pass">
+          <svg data-top="0" data-ypos="0" data-lines="1" data-scale="true"> 
+            <text lengthAdjust="spacingAndGlyphs" id="line_1"></text>
+          </svg>
+        </div>
+        <button class="ppp-random">Ngẫu nhiên</button>
+      </div>
+      
+      <div class="popup-passkey-player" id="ppp_player_6">
+        <textarea class="ppp-input" placeholder="Người chơi 6..."></textarea>
+        <button class="ppp-submit">Cập nhật</button>
+        
+        <div class="ppp-pass">
+          <svg data-top="0" data-ypos="0" data-lines="1" data-scale="true"> 
+            <text lengthAdjust="spacingAndGlyphs" id="line_1"></text>
+          </svg>
+        </div>
+        <button class="ppp-random">Ngẫu nhiên</button>
+      </div>
+      
+      <div class="popup-passkey-player" id="ppp_host">
+        <textarea class="ppp-input" placeholder="Dẫn chương trình..."></textarea>
+        <button class="ppp-submit">Cập nhật</button>
+        
+        <div class="ppp-pass">
+          <svg data-top="0" data-ypos="0" data-lines="1" data-scale="true"> 
+            <text lengthAdjust="spacingAndGlyphs" id="line_1"></text>
+          </svg>
+        </div>
+        <button class="ppp-random">Ngẫu nhiên</button>
+      </div>
+      
+      <textarea class="popup-passkey-copy" disabled></textarea>
+      
+    </div>
+
 	<script>
 		var round = '';
 		
