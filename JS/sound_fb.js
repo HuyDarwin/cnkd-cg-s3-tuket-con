@@ -323,6 +323,10 @@ $(function () {
               con.PlaySound("Assets/tuyệt%20đỉnh%20song%20ca.mp3", 1)
 				update(ref(db, 'commands'), { sound_cus_7: 0 });
             }
+            if(data.sound_cus_7 == 1){
+              con.PlaySound("Assets/y2mate.com - Background Suspense Music  Suspenseful  Dramatic Film Soundtracks ANTICIPATION.mp3", 3)
+				update(ref(db, 'commands'), { sound_cus_8: 0 });
+            }
 
 			if (data.sound_stop == 1) {
 				con.StopAllSounds();
