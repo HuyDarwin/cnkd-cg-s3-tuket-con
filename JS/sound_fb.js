@@ -324,7 +324,7 @@ $(function () {
 				update(ref(db, 'commands'), { sound_cus_7: 0 });
             }
             if(data.sound_cus_8 == 1){
-              con.PlaySound("Assets/y2mate.com - Background Suspense Music  Suspenseful  Dramatic Film Soundtracks ANTICIPATION.mp3", 3)
+              con.PlaySound("Assets/y2mate.com - Background Suspense Music  Suspenseful  Dramatic Film Soundtracks ANTICIPATION.mp3", 5)
 				update(ref(db, 'commands'), { sound_cus_8: 0 });
             }
 
